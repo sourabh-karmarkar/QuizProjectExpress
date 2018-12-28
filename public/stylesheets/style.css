@@ -1,8 +1,106 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}*/
+/*home page styl*/
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif,'Times New Roman', Times, serif;
+  font-size: 150%;
+}
+.QuizNav
+{
+  padding-right:50%;
+  width:25%;
+}
+ul {
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+img
+{
+  height: 50;
+  width: 50;
+}
+
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: rgba(255, 196, 0, 0.877);
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: cornsilk;
+  color: black;
+}
+/*Dropdown css*/
+.dropbtn {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 16px;
+  font-family: "Lato", sans-serif,'Times New Roman', Times, serif;
+  font-size: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color:cornsilk;
+}
+/*image container*/
+
+.imgcontainer
+{
+  padding-left:20%;
+  height: 75%;
+}
+#mainpic
+{
+  height: 135%;
+  width: 100%;
 }
