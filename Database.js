@@ -8,7 +8,7 @@ function getConnection(callback) {
     });
 }
 
-const fetchDocs = (subject,callback) => {
+const fetchDocs = (subject, callback) => {
     getConnection((db, con) => {
         const collection = db.collection('Quiz');
         collection.aggregate([{ $match: { sub: subject } }, { $sample: { size: 3 } }]).toArray((err, result) => {
@@ -18,4 +18,15 @@ const fetchDocs = (subject,callback) => {
         })
     });
 }
-module.exports = { fetchDocs };
+
+const getSubject = (callback) => {
+    getConnection((db, con) => {
+        const collection = db.collection('Quiz');
+        collection.distinct("quiz_subject",(err,result) => {
+            if (err) throw err;
+            callback(result);
+            con.close();
+        })
+    });
+}
+module.exports = { fetchDocs, getSubject };

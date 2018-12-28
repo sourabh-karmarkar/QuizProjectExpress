@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var path=require('path');
+var fetchSubject=require('../Database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -19,12 +19,16 @@ router.get('/Quiz_Questions.ejs', function(req, res, next) {
 
 
 router.get('/adminhomepage', function(req, res, next) {
-  res.render('AdminHomePage', { title: 'This is Admin Home Page' });
+    fetchSubject.getSubject((results)=>{
+      res.render('AdminHomePage', { title: 'This is Admin Home Page',result:results });
+    });
 });
 
 /* user page*/
 
 router.get('/home', function(req, res, next) {
   res.render('UserHomePage', { title: 'Express' });
+
 });
+
 module.exports = router;

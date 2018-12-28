@@ -1,12 +1,4 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}*/
-/*home page styl*/
+/*START OF HOME PAGE STYLE*/
 body {
   margin: 0;
   font-family: "Lato", sans-serif,'Times New Roman', Times, serif;
@@ -65,6 +57,7 @@ li a:hover:not(.active) {
 .dropdown {
   position: relative;
   display: inline-block;
+  
 }
 
 .dropdown-content {
@@ -99,8 +92,13 @@ li a:hover:not(.active) {
   padding-left:20%;
   height: 75%;
 }
+#quizBody
+{
+  padding-left:60%;
+}
 #mainpic
 {
   height: 135%;
   width: 100%;
 }
+/*End of Home PAGE STYLE*/
