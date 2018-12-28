@@ -57,6 +57,7 @@ li a:hover:not(.active) {
 .dropdown {
   position: relative;
   display: inline-block;
+  
 }
 
 .dropdown-content {
@@ -90,6 +91,10 @@ li a:hover:not(.active) {
 {
   padding-left:20%;
   height: 75%;
+}
+#quizBody
+{
+  padding-left:60%;
 }
 #mainpic
 {
