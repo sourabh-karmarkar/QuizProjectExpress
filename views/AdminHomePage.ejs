@@ -4,22 +4,36 @@
     <link rel='stylesheet' type='text/css' href="/stylesheets/AdminHomePage.css">
 </head>
 <body>
-    <ul>
-        <li><a href="#">Disable User</a></li>
-        <li><a href="#">Update Quiz</a></li>
-        <li><a href="#">Add Quiz</a></li>
-        <li><a href="#">Remove Quiz</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Subjects</a>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </li>
-    </ul>
-    <h3><%= title %> </h3>
-    <p>Welcome Admin</p>
 
+<ul>
+    <li><a href="#">Disable User</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Update Question</a>
+        <div class="dropdown-content">
+            <% result.forEach(function(subjects){ %>
+                <a class="<%= subjects %>" href="#"><%= subjects %></a>
+            <% });%>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Add Question</a>
+        <div class="dropdown-content">
+            <% result.forEach(function(subjects){ %>
+                <a class="<%= subjects %>" href="#"><%= subjects %></a>
+            <% });%>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Remove Question</a>
+        <div class="dropdown-content">
+            <% result.forEach(function(subjects){ %>
+                <a class="<%= subjects %>" href="#"><%= subjects %></a>
+            <% });%>
+        </div>
+    </li>
+</ul>
+
+<h3> <%= title %> </h3>
+<p>Welcome Admin</p>
 </body>
 </html>
