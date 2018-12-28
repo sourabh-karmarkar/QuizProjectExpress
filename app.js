@@ -20,7 +20,8 @@ app.use('/users', usersRouter);
 
 app.use('/home',indexRouter);
 app.use('/adminhomepage', indexRouter);
-
+app.use('/signup',indexRouter);
+app.use('/users/add',indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
