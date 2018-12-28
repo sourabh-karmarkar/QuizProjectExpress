@@ -2,12 +2,12 @@
 <ul>
   <li><a class="active" href="#home"><img src="/images/home.svg"/></a></li>
   <div class="dropdown">
-        <button class="dropbtn">Give Quiz</button>
-        <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        </div>
+        <select  id="subject" class="dropbtn" onclick="fetchQuestions(this);"> 
+          <option selected>Select Subject</option>
+          <option value="JS">JS</option>
+          <option value="Java">Java</option>
+          <option value="PHP">PHP</option>
+        </select>
       </div>
   <li><a href="#">Update</a></li>
   <li><a href="#">View Result</a></li>

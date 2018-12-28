@@ -25,5 +25,7 @@ router.get('/adminhomepage', function(req, res, next) {
 
 router.get('/home', function(req, res, next) {
   res.render('UserHomePage', { title: 'Express' });
+
 });
+
 module.exports = router;
