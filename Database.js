@@ -3,7 +3,6 @@ var url = "mongodb://localhost:27017/";
 function getConnection(callback) {
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        console.log("Coonnnn")
         let dbs = db.db('QuizExpressDB');
         callback(dbs, db);
     });
