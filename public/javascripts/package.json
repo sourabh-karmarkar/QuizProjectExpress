@@ -1,0 +1,14 @@
+{
+  "name": "javascripts",
+  "version": "1.0.0",
+  "description": "This folder is for storing javascript files",
+  "main": "Database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.1.10"
+  }
+}
