@@ -1,7 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var loginPageRouter = require('./routes/LoginPageRoute');
+var loginPageRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
