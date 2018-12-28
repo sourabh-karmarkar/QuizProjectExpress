@@ -12,6 +12,9 @@ router.get('/signup.ejs', function(req, res, next) {
 router.get('/login.ejs', function(req, res, next) {
   res.render('login', { title: 'Express' });
 });
+router.get('/Quiz_Questions.ejs', function(req, res, next) {
+  res.render('Quiz_Questions', { title: 'Express' });
+});
 
 
 

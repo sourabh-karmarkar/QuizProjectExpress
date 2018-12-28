@@ -18,8 +18,8 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', loginPageRouter);
 app.use('/users', usersRouter);
 
-app.use('/home',indexRouter);
-app.use('/adminhomepage', indexRouter);
+// app.use('/home',index);
+// app.use('/adminhomepage',index);
 
 
 // catch 404 and forward to error handler
