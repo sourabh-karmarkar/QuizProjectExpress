@@ -4,8 +4,16 @@ var fetchSubject=require('../Database');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('login', { title: 'Express' });
 });
+router.get('/signup.ejs', function(req, res, next) {
+  res.render('signup', { title: 'Express' });
+});
+router.get('/login.ejs', function(req, res, next) {
+  res.render('login', { title: 'Express' });
+});
+
+
 
 router.get('/adminhomepage', function(req, res, next) {
     fetchSubject.getSubject((results)=>{
@@ -13,4 +21,9 @@ router.get('/adminhomepage', function(req, res, next) {
     });
 });
 
-module.exports=router;
+/* user page*/
+
+router.get('/home', function(req, res, next) {
+  res.render('UserHomePage', { title: 'Express' });
+});
+module.exports = router;
