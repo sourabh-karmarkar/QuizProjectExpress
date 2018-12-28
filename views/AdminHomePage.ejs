@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel='stylesheet' type='text/css' href="/stylesheets/AdminHomePage.css">
 </head>
+
 <body>
+    <div class="navField">
+        <ul>
+            <li><a href="#">Disable User</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Update Question</a>
+                <div class="dropdown-content">
+                    <% result.forEach(function(subjects){ %>
+                    <a class="<%= subjects %>" href="#">
+                        <%= subjects %></a>
+                    <% });%>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Add Question</a>
+                <div class="dropdown-content">
+                    <% result.forEach(function(subjects){ %>
+                    <a class="<%= subjects %>" href="#">
+                        <%= subjects %></a>
+                    <% });%>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Remove Question</a>
+                <div class="dropdown-content">
+                    <% result.forEach(function(subjects){ %>
+                    <a class="<%= subjects %>" href="#">
+                        <%= subjects %></a>
+                    <% });%>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h3>
+        <%= title %>
+    </h3>
+    <h4>Welcome Admin</h4>
+    <div class="setField">
+        <p>demo div</p>
 
-<ul>
-    <li><a href="#">Disable User</a></li>
-    <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Update Question</a>
-        <div class="dropdown-content">
-            <% result.forEach(function(subjects){ %>
-                <a class="<%= subjects %>" href="#"><%= subjects %></a>
-            <% });%>
-        </div>
-    </li>
-    <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Add Question</a>
-        <div class="dropdown-content">
-            <% result.forEach(function(subjects){ %>
-                <a class="<%= subjects %>" href="#"><%= subjects %></a>
-            <% });%>
-        </div>
-    </li>
-    <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Remove Question</a>
-        <div class="dropdown-content">
-            <% result.forEach(function(subjects){ %>
-                <a class="<%= subjects %>" href="#"><%= subjects %></a>
-            <% });%>
-        </div>
-    </li>
-</ul>
+    </div>
 
-<h3> <%= title %> </h3>
-<p>Welcome Admin</p>
 </body>
+
 </html>
