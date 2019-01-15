@@ -1,32 +1,40 @@
 var express = require('express');
 var router = express.Router();
-var fetchSubject=require('../Database');
+var fetchSubject = require('../Database');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/getQuestion', (req, res) => {
+  if (req.query.sub) {
+    fetchSubject.fetchDocs(req.query.sub, (result) => {
+      console.log(result);
+      res.send(JSON.stringify(result));
+    });
+  }
+})
+router.get('/', function (req, res, next) {
   res.render('login', { title: 'Express' });
 });
-router.get('/signup.ejs', function(req, res, next) {
+router.get('/signup.ejs', function (req, res, next) {
   res.render('signup', { title: 'Express' });
 });
-router.get('/login.ejs', function(req, res, next) {
+router.get('/login.ejs', function (req, res, next) {
   res.render('login', { title: 'Express' });
 });
-router.get('/Quiz_Questions.ejs', function(req, res, next) {
-  res.render('Quiz_Questions', { title: 'Express' });
-});
+// router.get('/Quiz_Questions.ejs', function(req, res, next) {
+//   res.render('Quiz_Questions', { title: 'Express' });
+// });
 
 
 
-router.get('/adminhomepage', function(req, res, next) {
-    fetchSubject.getSubject((results)=>{
-      res.render('AdminHomePage', { title: 'This is Admin Home Page',result:results });
-    });
+router.get('/adminhomepage', function (req, res, next) {
+  fetchSubject.getSubject((results) => {
+    res.render('AdminHomePage', { title: 'This is Admin Home Page', result: results });
+  });
 });
 
 /* user page*/
 
-router.get('/home', function(req, res, next) {
+router.get('/home', function (req, res, next) {
   res.render('UserHomePage', { title: 'Express' });
 
 });

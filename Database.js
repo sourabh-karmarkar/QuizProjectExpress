@@ -11,7 +11,7 @@ function getConnection(callback) {
 const fetchDocs = (subject, callback) => {
     getConnection((db, con) => {
         const collection = db.collection('Quiz');
-        collection.aggregate([{ $match: { sub: subject } }, { $sample: { size: 3 } }]).toArray((err, result) => {
+        collection.aggregate([{ $match: { quiz_subject: subject } }, { $sample: { size: 3 } }]).toArray((err, result) => {
             if (err) throw err;
             callback(result);
             con.close();
@@ -22,7 +22,7 @@ const fetchDocs = (subject, callback) => {
 const getSubject = (callback) => {
     getConnection((db, con) => {
         const collection = db.collection('Quiz');
-        collection.distinct("quiz_subject",(err,result) => {
+        collection.distinct("quiz_subject", (err, result) => {
             if (err) throw err;
             callback(result);
             con.close();
