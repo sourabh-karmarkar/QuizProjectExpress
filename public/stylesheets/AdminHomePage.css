@@ -1,9 +1,21 @@
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color:rgba(139, 19, 10, 0.911);
+    }
+     .setField{
+         color: whitesmoke;
+         text-align: center;
+         border:1px solid black;
+          height: 75%;
+          width: 100%;
+          padding-top: 40%;
+    }
+    .navField{
+        height: 25%; 
     }
 
     li {

@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 function getConnection(callback) {
-    MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(url, { useNewUrlParser: true }, function (err, db) {
         if (err) throw err;
         let dbs = db.db('QuizExpressDB');
         callback(dbs, db);
@@ -29,4 +29,16 @@ const getSubject = (callback) => {
         })
     });
 }
-module.exports = { fetchDocs, getSubject };
+
+const insertUser = (obj,callback) => {
+    getConnection((db, con) => {
+        const collection = db.collection('Users');
+        collection.insertOne(obj,(err, result) => {
+            if (err) throw err;
+            callback(result);
+            con.close();
+        })
+    });
+};
+
+module.exports = { fetchDocs, getSubject, insertUser };

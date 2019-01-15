@@ -18,9 +18,16 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+<<<<<<< HEAD
 // app.use('/home',index);
 // app.use('/adminhomepage',index);
 
+=======
+app.use('/home',indexRouter);
+app.use('/adminhomepage', indexRouter);
+app.use('/signup',indexRouter);
+app.use('/users/add',indexRouter);
+>>>>>>> fccda74fc8c9c9583efb90d00c55a32e847bc8e2
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
